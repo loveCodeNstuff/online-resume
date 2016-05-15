@@ -1,0 +1,16 @@
+//***********************
+//       variables
+//************************/
+$fontFamily: Raleway;
+$fontSize: 14;
+
+/************************
+        Fonts
+************************/
+@import url(https://fonts.googleapis.com/css?family=Raleway:500,700);
+
+// /************************
+//        imports
+// ************************/
+@import 'partials/generalScope';
+@import 'partials/hero';
