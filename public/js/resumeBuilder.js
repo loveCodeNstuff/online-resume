@@ -22,7 +22,7 @@ var bio = {
 
     var heroPic = '<picture class="hero">' + ("<source media=\"(min-width: 769px)\" srcset=" + bio.heroPics[0] + ">") + ("<source media=\"(min-width: 465px)\" srcset=\"" + bio.heroPics[1] + "\">") + ("<img src=\"" + bio.heroPics[2] + "\" alt=\"Computer screen with code\">") + '</picture>';
 
-    $('#hero').append(heroPic).append("<div class=\"animated fadeIn name\">" + "Richard C Felix" + "<div class=\"animated fadeIn role\">" + "Full Stack Web Developer" + "</div>" + "</div>");
+    $('#hero').append(heroPic).append("<div class=\"animated fadeIn name\">" + "Richard C Felix" + "<div class=\"animated fadeIn role\">" + "Full Stack Web Developer" + "</div>" + "<center>" + "<div class=\"animated fadeIn mePic\">" + ("<img src=\"" + bio.biopic + "\" class=\"img-circle img-responsive\">") + "</div>" + "</center>" + "</div>");
 
     $('#footerTitle').append('<h2 class="col-md-12 text-center text-uppercase">' + 'Keep in Touch ' + '</h2>');
 

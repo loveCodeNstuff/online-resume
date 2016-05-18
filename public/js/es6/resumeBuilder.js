@@ -36,7 +36,12 @@ const bio = {
                   `Richard C Felix` +
                   `<div class="animated fadeIn role">` +
                     `Full Stack Web Developer` +
-                  `</div>` +
+                    `</div>` +
+                    `<center>` +
+                      `<div class="animated fadeIn mePic">` +
+                        `<img src="${bio.biopic}" class="img-circle img-responsive">` +
+                      `</div>` +
+                    `</center>` +
                 `</div>`);
 
       $('#footerTitle').append('<h2 class="col-md-12 text-center text-uppercase">' +
