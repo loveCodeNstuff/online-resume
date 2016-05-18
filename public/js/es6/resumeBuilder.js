@@ -39,12 +39,12 @@ const bio = {
                   `</div>` +
                 `</div>`);
 
-      $('#footerTitle').append('<br/> <h1 class="col-md-12 text-center text-uppercase">' +
+      $('#footerTitle').append('<h2 class="col-md-12 text-center text-uppercase">' +
                                 'Keep in Touch ' +
-                              '</h1> <br/>');
+                              '</h2>');
 
       $('#footerEntry')
-        .append(`</br><div class="col-md-3 text-center">` +
+        .append(`<div class="col-md-3 text-center">` +
                   `mobile <br/> ${bio.contacts.mobile}` +
                 `</div>`)
         .append(`<div class="col-md-3 text-center">` +
@@ -57,9 +57,9 @@ const bio = {
                   `Twitter <br/> ${bio.contacts.twitter}` +
                 `</div>`);
 
-      $('#skillsTitle').append('<br/> <h1 class="col-md-12 text-center text-uppercase">' +
+      $('#skillsTitle').append('<h1 class="col-md-12 text-center text-uppercase">' +
                                 ' Talents ' +
-                              '</h1> <br/>');
+                              '</h1>');
 
       if(bio.skills.length !== 0) {
 
@@ -115,9 +115,9 @@ const education = {
     ],
     "display": ()=>{
 
-      $('#educationTitle').append('<br/> <h1 class="col-md-12 text-center text-uppercase">' +
+      $('#educationTitle').append('<h1 class="col-md-12 text-center text-uppercase">' +
                                 ' Education ' +
-                              '</h1> <br/>');
+                              '</h1>');
 
       for(let x = 0; x < education.schools.length; x++) {
 
@@ -130,9 +130,9 @@ const education = {
                     `${education.schools[x].majors} </div>`);
       }
 
-      $('#onlineClassTitle').append('<br/> <h1 class="col-md-12 text-center text-uppercase">' +
-                                ' Online Courses ' +
-                              '</h1> <br/>');
+      $('#onlineClassTitle').append('<h2 class="col-md-12 text-center text-uppercase">' +
+                                      ' Online Courses ' +
+                                    '</h2>');
 
       for(let x = 0; x < education.onlineCourses.length; x++) {
 
@@ -170,9 +170,9 @@ const work = {
     ],
     "display": ()=>{
 
-      $('#workTitle').append('<br/><br/><h1 class="col-md-12 text-center text-uppercase">' +
+      $('#workTitle').append('<h1 class="col-md-12 text-center text-uppercase">' +
                                 ' Work Experience ' +
-                              '</h1> <br/>');
+                              '</h1>');
 
       for(let x = 0; x < work.jobs.length; x++) {
 
@@ -226,7 +226,7 @@ const projects = {
                   `${projects.projects[x].dates} <br/>` +
                   `${projects.projects[x].description} <br/>` +
                   `<img src=${projects.projects[x].images[0]} alt='project pictures'>"` +
-                `<div/> <br/><br/>`);
+                `<div/>`);
     }
   }
 };
@@ -237,7 +237,7 @@ projects.display();
      Map
 *************/
 $('#mapTitle')
-  .append(`<br/> <br/> <div class="col-md-12 text-center">` +
+  .append(`<div class="col-md-12 text-center">` +
             `<h1>Where I have lived and worked</h1>` +
           `</div>`)
 $('#mapDiv').append(googleMap);

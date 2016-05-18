@@ -24,11 +24,11 @@ var bio = {
 
     $('#hero').append(heroPic).append("<div class=\"animated fadeIn name\">" + "Richard C Felix" + "<div class=\"animated fadeIn role\">" + "Full Stack Web Developer" + "</div>" + "</div>");
 
-    $('#footerTitle').append('<br/> <h1 class="col-md-12 text-center text-uppercase">' + 'Keep in Touch ' + '</h1> <br/>');
+    $('#footerTitle').append('<h2 class="col-md-12 text-center text-uppercase">' + 'Keep in Touch ' + '</h2>');
 
-    $('#footerEntry').append("</br><div class=\"col-md-3 text-center\">" + ("mobile <br/> " + bio.contacts.mobile) + "</div>").append("<div class=\"col-md-3 text-center\">" + ("email <br/> " + bio.contacts.email) + "</div>").append("<div class=\"col-md-3 text-center\">" + ("Github <br/> " + bio.contacts.github) + "</div>").append("<div class=\"col-md-3 text-center\">" + ("Twitter <br/> " + bio.contacts.twitter) + "</div>");
+    $('#footerEntry').append("<div class=\"col-md-3 text-center\">" + ("mobile <br/> " + bio.contacts.mobile) + "</div>").append("<div class=\"col-md-3 text-center\">" + ("email <br/> " + bio.contacts.email) + "</div>").append("<div class=\"col-md-3 text-center\">" + ("Github <br/> " + bio.contacts.github) + "</div>").append("<div class=\"col-md-3 text-center\">" + ("Twitter <br/> " + bio.contacts.twitter) + "</div>");
 
-    $('#skillsTitle').append('<br/> <h1 class="col-md-12 text-center text-uppercase">' + ' Talents ' + '</h1> <br/>');
+    $('#skillsTitle').append('<h1 class="col-md-12 text-center text-uppercase">' + ' Talents ' + '</h1>');
 
     if (bio.skills.length !== 0) {
 
@@ -72,14 +72,14 @@ var education = {
   }],
   "display": function display() {
 
-    $('#educationTitle').append('<br/> <h1 class="col-md-12 text-center text-uppercase">' + ' Education ' + '</h1> <br/>');
+    $('#educationTitle').append('<h1 class="col-md-12 text-center text-uppercase">' + ' Education ' + '</h1>');
 
     for (var x = 0; x < education.schools.length; x++) {
 
       $('#educationEntry').append("<div class=\"col-md-6 text-center\">" + (education.schools[x].name + " <br/>") + (education.schools[x].degree + " <br/>") + (education.schools[x].dates + " <br/>") + (education.schools[x].location + " <br/>") + (education.schools[x].majors + " </div>"));
     }
 
-    $('#onlineClassTitle').append('<br/> <h1 class="col-md-12 text-center text-uppercase">' + ' Online Courses ' + '</h1> <br/>');
+    $('#onlineClassTitle').append('<h2 class="col-md-12 text-center text-uppercase">' + ' Online Courses ' + '</h2>');
 
     for (var _x = 0; _x < education.onlineCourses.length; _x++) {
 
@@ -109,7 +109,7 @@ var work = {
   }],
   "display": function display() {
 
-    $('#workTitle').append('<br/><br/><h1 class="col-md-12 text-center text-uppercase">' + ' Work Experience ' + '</h1> <br/>');
+    $('#workTitle').append('<h1 class="col-md-12 text-center text-uppercase">' + ' Work Experience ' + '</h1>');
 
     for (var x = 0; x < work.jobs.length; x++) {
 
@@ -141,7 +141,7 @@ var projects = {
 
     for (var x = 0; x < projects.projects.length; x++) {
 
-      $('#projectsEntry').append("<div class=\"col-md-6 text-center\">" + (projects.projects[x].title + " <br/>") + (projects.projects[x].dates + " <br/>") + (projects.projects[x].description + " <br/>") + ("<img src=" + projects.projects[x].images[0] + " alt='project pictures'>\"") + "<div/> <br/><br/>");
+      $('#projectsEntry').append("<div class=\"col-md-6 text-center\">" + (projects.projects[x].title + " <br/>") + (projects.projects[x].dates + " <br/>") + (projects.projects[x].description + " <br/>") + ("<img src=" + projects.projects[x].images[0] + " alt='project pictures'>\"") + "<div/>");
     }
   }
 };
@@ -151,7 +151,7 @@ projects.display();
 /*************
      Map
 *************/
-$('#mapTitle').append("<br/> <br/> <div class=\"col-md-12 text-center\">" + "<h1>Where I have lived and worked</h1>" + "</div>");
+$('#mapTitle').append("<div class=\"col-md-12 text-center\">" + "<h1>Where I have lived and worked</h1>" + "</div>");
 $('#mapDiv').append(googleMap);
 
 /************************************************************
