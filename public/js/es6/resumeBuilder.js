@@ -41,6 +41,13 @@ const bio = {
                       `<div class="animated fadeIn mePic">` +
                         `<img src="${bio.biopic}" class="img-circle img-responsive">` +
                       `</div>` +
+                      `<div class="contactInfo animated fadeIn">` +
+                        `mobile: ${bio.contacts.mobile} <br/>` +
+                        `email: ${bio.contacts.email} <br/>` +
+                        `github: ${bio.contacts.github} <br/>` +
+                        `twitter: ${bio.contacts.twitter} <br/>` +
+                        `location: ${bio.contacts.location}` +
+                      `</div>` +
                     `</center>` +
                 `</div>`);
 
@@ -49,17 +56,20 @@ const bio = {
                               '</h2>');
 
       $('#footerEntry')
-        .append(`<div class="col-md-3 text-center">` +
+        .append(`<div class="col-md-2 text-center">` +
                   `mobile <br/> ${bio.contacts.mobile}` +
                 `</div>`)
-        .append(`<div class="col-md-3 text-center">` +
+        .append(`<div class="col-md-2 text-center">` +
                   `email <br/> ${bio.contacts.email}` +
                 `</div>`)
         .append(`<div class="col-md-3 text-center">` +
                   `Github <br/> ${bio.contacts.github}` +
                 `</div>`)
-        .append(`<div class="col-md-3 text-center">` +
+        .append(`<div class="col-md-2 text-center">` +
                   `Twitter <br/> ${bio.contacts.twitter}` +
+                `</div>`)
+        .append(`<div class="col-md-2 text-center">` +
+                  `Location <br/> ${bio.contacts.location}` +
                 `</div>`);
 
       $('#skillsTitle').append('<h1 class="col-md-12 text-center text-uppercase">' +
@@ -128,7 +138,7 @@ const education = {
 
         $('#educationEntry')
           .append(`<div class="col-md-6 text-center">` +
-                    `${education.schools[x].name} <br/>` +
+                    `<a href="${education.schools[x].url}" target="_blank">${education.schools[x].name}</a> <br/>` +
                     `${education.schools[x].degree} <br/>` +
                     `${education.schools[x].dates} <br/>` +
                     `${education.schools[x].location} <br/>` +
@@ -146,7 +156,7 @@ const education = {
                     `${education.onlineCourses[x].title} <br/>` +
                     `${education.onlineCourses[x].school} <br/>` +
                     `${education.onlineCourses[x].date} <br/>` +
-                    `${education.onlineCourses[x].url} </div>`);
+                    `<a href="${education.onlineCourses[x].url}" target="_blank">${education.onlineCourses[x].url}</a> </div>`);
       }
     }
 };
@@ -160,14 +170,14 @@ const work = {
     "jobs": [
       {
         "employer": "Pachulski Stang Zhiel & Jones",
-        "role": "Records Manager",
+        "title": "Records Manager",
         "location": "780 3rd Avenue New York, NY 10017",
         "dates": "May 2008 to Dec 2013",
         "description": "Managing File Clerks"
       },
       {
         "employer": "Primex",
-        "role": "Full Stack Web Developer",
+        "title": "Full Stack Web Developer",
         "location": "54 west 21 street New York, NY 10010",
         "dates": "Oct 2015 to Present",
         "description": "Making and Maintaining Firms Websites"
@@ -184,7 +194,7 @@ const work = {
         $('#workEntry')
           .append(`<div class="col-md-6 text-center">` +
                     `${work.jobs[x].employer} <br/>` +
-                    `${work.jobs[x].role} <br/>` +
+                    `${work.jobs[x].title} <br/>` +
                     `${work.jobs[x].dates} <br/>` +
                     `${work.jobs[x].location} <br/>` +
                     `${work.jobs[x].description} </div>`);
@@ -212,7 +222,7 @@ const projects = {
       "dates": "May 2016",
       "description": "created a Online Resume",
       "images": [
-        "/img/pic.png"
+        "/img/bg-md.png"
       ]
     }
   ],

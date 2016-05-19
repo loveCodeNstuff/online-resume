@@ -22,11 +22,11 @@ var bio = {
 
     var heroPic = '<picture class="hero">' + ("<source media=\"(min-width: 769px)\" srcset=" + bio.heroPics[0] + ">") + ("<source media=\"(min-width: 465px)\" srcset=\"" + bio.heroPics[1] + "\">") + ("<img src=\"" + bio.heroPics[2] + "\" alt=\"Computer screen with code\">") + '</picture>';
 
-    $('#hero').append(heroPic).append("<div class=\"animated fadeIn name\">" + "Richard C Felix" + "<div class=\"animated fadeIn role\">" + "Full Stack Web Developer" + "</div>" + "<center>" + "<div class=\"animated fadeIn mePic\">" + ("<img src=\"" + bio.biopic + "\" class=\"img-circle img-responsive\">") + "</div>" + "</center>" + "</div>");
+    $('#hero').append(heroPic).append("<div class=\"animated fadeIn name\">" + "Richard C Felix" + "<div class=\"animated fadeIn role\">" + "Full Stack Web Developer" + "</div>" + "<center>" + "<div class=\"animated fadeIn mePic\">" + ("<img src=\"" + bio.biopic + "\" class=\"img-circle img-responsive\">") + "</div>" + "<div class=\"contactInfo animated fadeIn\">" + ("mobile: " + bio.contacts.mobile + " <br/>") + ("email: " + bio.contacts.email + " <br/>") + ("github: " + bio.contacts.github + " <br/>") + ("twitter: " + bio.contacts.twitter + " <br/>") + ("location: " + bio.contacts.location) + "</div>" + "</center>" + "</div>");
 
     $('#footerTitle').append('<h2 class="col-md-12 text-center text-uppercase">' + 'Keep in Touch ' + '</h2>');
 
-    $('#footerEntry').append("<div class=\"col-md-3 text-center\">" + ("mobile <br/> " + bio.contacts.mobile) + "</div>").append("<div class=\"col-md-3 text-center\">" + ("email <br/> " + bio.contacts.email) + "</div>").append("<div class=\"col-md-3 text-center\">" + ("Github <br/> " + bio.contacts.github) + "</div>").append("<div class=\"col-md-3 text-center\">" + ("Twitter <br/> " + bio.contacts.twitter) + "</div>");
+    $('#footerEntry').append("<div class=\"col-md-2 text-center\">" + ("mobile <br/> " + bio.contacts.mobile) + "</div>").append("<div class=\"col-md-2 text-center\">" + ("email <br/> " + bio.contacts.email) + "</div>").append("<div class=\"col-md-3 text-center\">" + ("Github <br/> " + bio.contacts.github) + "</div>").append("<div class=\"col-md-2 text-center\">" + ("Twitter <br/> " + bio.contacts.twitter) + "</div>").append("<div class=\"col-md-2 text-center\">" + ("Location <br/> " + bio.contacts.location) + "</div>");
 
     $('#skillsTitle').append('<h1 class="col-md-12 text-center text-uppercase">' + ' Talents ' + '</h1>');
 
@@ -76,14 +76,14 @@ var education = {
 
     for (var x = 0; x < education.schools.length; x++) {
 
-      $('#educationEntry').append("<div class=\"col-md-6 text-center\">" + (education.schools[x].name + " <br/>") + (education.schools[x].degree + " <br/>") + (education.schools[x].dates + " <br/>") + (education.schools[x].location + " <br/>") + (education.schools[x].majors + " </div>"));
+      $('#educationEntry').append("<div class=\"col-md-6 text-center\">" + ("<a href=\"" + education.schools[x].url + "\" target=\"_blank\">" + education.schools[x].name + "</a> <br/>") + (education.schools[x].degree + " <br/>") + (education.schools[x].dates + " <br/>") + (education.schools[x].location + " <br/>") + (education.schools[x].majors + " </div>"));
     }
 
     $('#onlineClassTitle').append('<h2 class="col-md-12 text-center text-uppercase">' + ' Online Courses ' + '</h2>');
 
     for (var _x = 0; _x < education.onlineCourses.length; _x++) {
 
-      $('#onlineClassEntry').append("<div class=\"col-md-12 text-center\">" + (education.onlineCourses[_x].title + " <br/>") + (education.onlineCourses[_x].school + " <br/>") + (education.onlineCourses[_x].date + " <br/>") + (education.onlineCourses[_x].url + " </div>"));
+      $('#onlineClassEntry').append("<div class=\"col-md-12 text-center\">" + (education.onlineCourses[_x].title + " <br/>") + (education.onlineCourses[_x].school + " <br/>") + (education.onlineCourses[_x].date + " <br/>") + ("<a href=\"" + education.onlineCourses[_x].url + "\" target=\"_blank\">" + education.onlineCourses[_x].url + "</a> </div>"));
     }
   }
 };
@@ -96,13 +96,13 @@ education.display();
 var work = {
   "jobs": [{
     "employer": "Pachulski Stang Zhiel & Jones",
-    "role": "Records Manager",
+    "title": "Records Manager",
     "location": "780 3rd Avenue New York, NY 10017",
     "dates": "May 2008 to Dec 2013",
     "description": "Managing File Clerks"
   }, {
     "employer": "Primex",
-    "role": "Full Stack Web Developer",
+    "title": "Full Stack Web Developer",
     "location": "54 west 21 street New York, NY 10010",
     "dates": "Oct 2015 to Present",
     "description": "Making and Maintaining Firms Websites"
@@ -113,7 +113,7 @@ var work = {
 
     for (var x = 0; x < work.jobs.length; x++) {
 
-      $('#workEntry').append("<div class=\"col-md-6 text-center\">" + (work.jobs[x].employer + " <br/>") + (work.jobs[x].role + " <br/>") + (work.jobs[x].dates + " <br/>") + (work.jobs[x].location + " <br/>") + (work.jobs[x].description + " </div>"));
+      $('#workEntry').append("<div class=\"col-md-6 text-center\">" + (work.jobs[x].employer + " <br/>") + (work.jobs[x].title + " <br/>") + (work.jobs[x].dates + " <br/>") + (work.jobs[x].location + " <br/>") + (work.jobs[x].description + " </div>"));
     }
   }
 };
@@ -133,7 +133,7 @@ var projects = {
     "title": "Oline Resume",
     "dates": "May 2016",
     "description": "created a Online Resume",
-    "images": ["/img/pic.png"]
+    "images": ["/img/bg-md.png"]
   }],
   "display": function display() {
 

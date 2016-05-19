@@ -17,10 +17,16 @@
     text-shadow: 2px 2px #000;
 
     .role{
-      font-size: .3em;
+      font-size: .4em;
       color: white;
       animation-duration: 2s;
       animation-delay: 1.5s;
+    }
+
+    .contactInfo{
+      font-size: .3em;
+      animation-duration: 2s;
+      animation-delay: 2s;
     }
   }
 
@@ -35,6 +41,5 @@
       height: 100vh;
       width: 100vw;
     }
-
   }
 }
